@@ -15,11 +15,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family:  Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #eaeaea;
     line-height: 1.8; /* Menambah spasi antar baris */
+    color: #444444;
 }
 
 header {
@@ -116,7 +117,7 @@ footer {
     text-align: center;
     padding: 20px; /* Tambah padding agar lebih nyaman */
     margin-top: 50px; /* Beri jarak lebih besar antara footer dan konten sebelumnya */
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 8px rgba(22, 22, 22, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -138,8 +139,29 @@ footer {
 img {
     border: 2px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(22, 22, 22, 0.1);
 }
+.form-container {
+            width: 50%; /* Lebar form */
+            margin: 0 auto; /* Membuat form berada di tengah secara horizontal */
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, textarea {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        input[type="submit"] {
+            width: 30%; /* Lebar tombol kirim */
+            align-self: center; /* Membuat tombol kirim di tengah */
+            padding: 10px;
+        }
 
     </style>
 </head>
@@ -162,7 +184,7 @@ img {
         <div class="content">
             <p>Memahami wanita bisa menjadi hal yang menantang bagi banyak orang. Namun, dengan pendekatan yang tepat, kita bisa membangun hubungan yang lebih baik dan lebih saling menghargai. Berikut adalah beberapa tips yang bisa membantu:</p></div>
             </section>
-   
+            <img src="gambar1.jpg.jpeg" alt="Ilustrasi wanita" style="display: block; margin: 0 auto; max-width: 100%;">
     
     
     <section id="tips1">
@@ -182,6 +204,7 @@ img {
                 Dengan mendengarkan dengan empati, Anda membantu membangun hubungan yang lebih mendalam dan saling percaya, serta menciptakan lingkungan yang lebih suportif dan saling memahami.</li>
             </ul>
         </section>
+         <center><a href="#top">kembali ke atas</a></center>
     
         
         <section id="tips2">
@@ -216,7 +239,7 @@ img {
         
         <p><strong>Kesimpulan</strong></p>
         <p>Hormati kebutuhan emosional pasangan adalah aspek penting dalam membangun dan mempertahankan hubungan yang sehat. Dengan memberikan dukungan emosional yang tepat, Anda membantu menciptakan hubungan yang penuh pengertian, mendukung kesejahteraan emosional, dan memperkuat ikatan dalam hubungan. Menghormati kebutuhan emosional pasangan tidak hanya memperkuat hubungan tetapi juga berkontribusi pada kebahagiaan dan kesejahteraan kedua belah pihak.</p>
-    </section>
+    </section> <center><a href="#top">kembali ke atas</a></center>
         
         <section id="tips3">
             <h2>3. Komunikasikan Kebutuhan dan Harapan</h2>
@@ -251,6 +274,7 @@ img {
             <p><strong>Kesimpulan</strong></p>
             <p>Mengkomunikasikan kebutuhan dan harapan secara efektif adalah kunci untuk membangun hubungan yang sehat dan memuaskan. Ini memungkinkan pasangan untuk saling memahami, menghindari kesalahpahaman, dan menciptakan lingkungan yang penuh dengan kepercayaan dan dukungan. Dengan komunikasi yang terbuka dan jujur, hubungan dapat berkembang lebih baik dan menjadi lebih harmonis, yang pada akhirnya akan meningkatkan kebahagiaan dan kepuasan dalam hubungan tersebut.</p>
         </section>
+         <center><a href="#top">kembali ke atas</a></center>
         
         <button onclick="showMoreTips()">Tampilkan Tips Lain</button>
         <div id="moreTips" style="display:none;">
@@ -287,6 +311,8 @@ img {
         <p><strong>Kesimpulan</strong></p>
         <p>Memberikan ruang dan waktu kepada pasangan adalah tindakan penting dalam menjaga hubungan yang sehat. Ini menunjukkan bahwa Anda menghargai dan menghormati kebutuhan mereka untuk berkembang sebagai individu, yang pada akhirnya akan memperkuat ikatan emosional dan menciptakan keseimbangan yang lebih baik dalam hubungan. Dengan memberikan ruang yang cukup, Anda tidak hanya mendukung kesejahteraan pasangan Anda, tetapi juga membantu menciptakan lingkungan yang lebih harmonis dan saling menghargai.</p>
     </section>
+     <center><a href="#top">kembali ke atas</a></center>
+     
             <section id="tips5">
                 <h2>5. Tunjukkan Apresiasi</h2>
                 <p><strong>Mengapa Apresiasi Itu Penting?</strong></p>
@@ -336,19 +362,21 @@ img {
         }
     </script>
     
-    <h2>Form Komentar</h2>
-<form action="/submit" method="post">
-    <label for="name">Nama:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+    <div class="form-container">
+        <h2>Form Komentar</h2>
+        <form action="/submit" method="post">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-    <label for="comment">Komentar:</label><br>
-    <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+            <label for="comment">Komentar:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
 
-    <input type="submit" value="Kirim">
-</form>
+            <input type="submit" value="Kirim">
+        </form>
+    </div>
 
 </body>
 </html>
