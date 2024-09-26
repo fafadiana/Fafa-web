@@ -162,6 +162,18 @@ img {
             align-self: center; /* Membuat tombol kirim di tengah */
             padding: 10px;
         }
+        .social-links {
+            text-align: center; /* Agar tautan media sosial berada di tengah */
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
 
     </style>
 </head>
@@ -361,7 +373,14 @@ img {
             }
         }
     </script>
-    
+    <div class="social-links">
+        <h3>Ikuti Kami di Media Sosial</h3>
+        <a href="https://www.instagram.com/fafaa_diaanaa" target="_blank">
+            <img src="instagram-icon.png" alt="Instagram">
+        </a>
+    </div>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <div class="form-container">
         <h2>Form Komentar</h2>
         <form action="/submit" method="post">
